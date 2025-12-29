@@ -17,9 +17,11 @@ Both models have separate:
 
 ### Install dependencies
 `cd logistic_app`
+
 `pip install -r requirements.txt`
 
 `cd ../decision_tree_app`
+
 `pip install -r requirements.txt`
 
 
