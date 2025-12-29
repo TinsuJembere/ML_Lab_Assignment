@@ -27,6 +27,7 @@ Both models have separate:
 
 ### Run the apps
 `uvicorn main:app --host 127.0.0.1 --port 9050 # Logistic Regression`
+
 `uvicorn main:app --host 127.0.0.1 --port 9051 # Decision Tree`
 
 ## Usage
