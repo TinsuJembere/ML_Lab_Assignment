@@ -22,6 +22,23 @@ def home(request: Request):
 
 @app.post("/predict")
 def predict(data: InputData):
-    arr = np.array([[data.sepal_length, data.sepal_width, data.petal_length, data.petal_width]])
-    prediction = model.predict(arr)[0]
-    return {"prediction": int(prediction)}
+    arr = np.array([[
+        data.sepal_length,
+        data.sepal_width,
+        data.petal_length,
+        data.petal_width
+    ]])
+
+    pred_class = int(model.predict(arr)[0])
+
+    flower_map = {
+        0: "Setosa",
+        1: "Versicolor",
+        2: "Virginica"
+    }
+
+    return {
+        "class": pred_class,
+        "flower": flower_map[pred_class]
+    }
+

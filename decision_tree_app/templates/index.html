@@ -86,7 +86,10 @@
             body: JSON.stringify(data),
           });
           const json = await response.json();
-          resultDiv.innerHTML = `<h4 class="text-success">Prediction: ${json.prediction}</h4>`;
+          resultDiv.innerHTML = `
+    <h4 class="text-success">Flower Type: ${json.flower}</h4>
+    <p class="text-muted">Class ID: ${json.class}</p>
+`;
         } catch (err) {
           resultDiv.innerHTML = `<h4 class="text-danger">Error: ${err}</h4>`;
         }
