@@ -14,6 +14,8 @@ Both models have separate:
 - Frontend (HTML forms)
 
 ## Setup
+### Create virtual invironment
+`python -m venv venv`
 
 ### Install dependencies
 `cd logistic_app`
